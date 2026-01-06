@@ -405,7 +405,7 @@ st.dataframe(
         "title","meta_description","meta_desc_len","h1_count",
         "missing_title","missing_meta","missing_h1"
     ]],
-    width="stretch"
+    use_container_width=True
 )
 
 st.download_button(
@@ -441,7 +441,7 @@ links_df: pd.DataFrame = res["links_df"]
 if links_df is None or links_df.empty:
     st.info("Link checking is disabled or no link data was collected.")
 else:
-    st.dataframe(links_df, width="stretch")
+    st.dataframe(links_df, use_container_width=True)
     st.download_button(
         "Download links CSV",
         data=links_df.to_csv(index=False).encode("utf-8"),
@@ -476,7 +476,7 @@ else:
         "why": it.get("why"),
         "how": it.get("how"),
     } for it in fix_list])
-    st.dataframe(fix_df, width="stretch")
+    st.dataframe(fix_df, use_container_width=True)
 
 st.subheader("Quick Wins")
 if fix_list:
@@ -536,7 +536,7 @@ if enable_ai:
             })
 
         sug_df = pd.DataFrame(sug_rows)
-        st.dataframe(sug_df, width="stretch")
+        st.dataframe(sug_df, use_container_width=True)
 
         st.download_button(
             "Download AI suggestions CSV",
