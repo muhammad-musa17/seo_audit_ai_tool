@@ -210,7 +210,7 @@ st.sidebar.info("Set env var OPENROUTER_API_KEY. Never hardcode keys.")
 st.title("SEO Audit AI — Phase 4 (Action Plan + Reporting)")
 st.caption("Homepage SEO + technical SEO + internal crawl + AI action plan + client-ready report.")
 
-url = st.text_input("Website URL", value="https://www.tigertigerfoods.com/")
+url = st.text_input("Website URL", value="")
 
 run = st.button("Run SEO Check", type="primary")
 
