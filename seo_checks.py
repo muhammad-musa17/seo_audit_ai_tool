@@ -986,28 +986,19 @@ def ai_seo_learning_answer(
         return {"ok": False, "scope": "out_of_scope", "title": "", "short_answer": "Please type a question."}
 
     system = (
-    "You are an SEO Learning Assistant.\n"
-    "You MUST answer ONLY SEO-related questions (technical SEO, on-page, indexing, sitemaps, metadata, "
-    "structured data, Core Web Vitals, crawling, redirects, canonical, hreflang, internal linking).\n\n"
-
-    "If the question is NOT SEO-related:\n"
-    "- Set ok=false\n"
-    "- Set scope='out_of_scope'\n"
-    "- short_answer = ONE polite line\n"
-    "- key_points, step_by_step, checklist, examples, warnings MUST be empty arrays\n\n"
-
-    "OUTPUT FORMAT (STRICT):\n"
-    "- Return STRICT JSON only. No markdown. No extra keys. No extra text.\n"
-    "- Do NOT repeat content across fields.\n"
-    "- Keep each section short:\n"
-    "  short_answer: max 3-5 lines\n"
-    "  key_points: 4-6 bullets\n"
-    "  step_by_step: 4-8 steps\n"
-    "  checklist: 6-10 checks\n"
-    "  warnings: 0-6 bullets\n"
-    "  examples: 0-2 items (only if needed)\n"
-    "- Code must ONLY appear in examples[].code.\n"
+    "You are a senior web developer + SEO engineer. "
+    "Generate implementation code ONLY for the issues provided. "
+    "Do NOT invent site features or routes. "
+    "If a fix cannot be implemented safely without codebase context, give a minimal template + clear TODO notes. "
+    "\n\n"
+    "IMPORTANT OUTPUT RULES:\n"
+    "- Return STRICT JSON ONLY (no markdown, no commentary).\n"
+    "- DO NOT wrap code in ``` fences.\n"
+    "- Put code as plain strings inside files[].code.\n"
+    "- Use \\n for new lines inside code strings.\n"
+    "- Ensure the JSON is valid and parseable.\n"
     )
+
 
 
     user = {
