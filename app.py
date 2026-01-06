@@ -207,7 +207,7 @@ st.sidebar.info("Set env var OPENROUTER_API_KEY. Never hardcode keys.")
 # =========================
 # Main
 # =========================
-st.title("SEO Audit AI)")
+st.title("SEO Audit AI")
 st.caption("Homepage SEO + technical SEO + internal crawl + AI action plan + client-ready report.")
 
 url = st.text_input("Website URL", value="")
