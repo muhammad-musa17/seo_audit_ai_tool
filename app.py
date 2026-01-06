@@ -164,7 +164,7 @@ ai_model = st.sidebar.selectbox(
         "google/gemma-3-27b-it:free",
         "meta-llama/llama-3.3-70b-instruct:free",
         "tngtech/deepseek-r1t2-chimera:free",
-        "openai/gpt-oss-120b:free",
+        "google/gemma-3n-e2b-it:free",
         "google/gemini-2.0-flash-exp:free",
         "qwen/qwen3-coder:free",
     ],
