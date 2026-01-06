@@ -6,6 +6,10 @@ import pandas as pd
 
 from seo_checks import run_audit, grade_from_score, ai_seo_qa, ai_seo_learning_answer
 
+# ---- Load OpenRouter key from Streamlit Secrets into env (Cloud-safe) ----
+if "OPENROUTER_API_KEY" in st.secrets and st.secrets["OPENROUTER_API_KEY"]:
+    os.environ["OPENROUTER_API_KEY"] = str(st.secrets["OPENROUTER_API_KEY"]).strip()
+
 
 
 st.set_page_config(page_title="SEO Audit AI", layout="wide")
